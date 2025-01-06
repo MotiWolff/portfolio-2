@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Havlin Family Website - Project Details</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+    <div class="container">
+        <header class="main-header">
+            <nav>
+                <a href="index.html" class="logo">M.Wolff;</a>
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </nav>
+        </header>
+
+        <main class="project-details">
+            <section class="project-hero">
+                <h1>Havlin Family Website</h1>
+                <div class="video-container">
+                    <video autoplay loop muted playsinline>
+                        <source src="havlin-demo.webm" type="video/webm">
+                        <source src="havlin-demo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="project-meta">
+                    <div class="tech-stack">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Git</span>
+                        <span>Netlify</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">Live Demo |</a>
+                        <a href="https://github.com/MotiWolff/Pregnancy-Tracker" class="project-link">GitHub</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="project-content">
+                <h2>Project Overview</h2>
+                <p>
+                    The Havlin Family Website is a heritage-focused web application showcasing the family's Jewish legacy 
+                    and Chabad activities. The project required a delicate balance between modern web design principles 
+                    and traditional Jewish aesthetics.
+                </p>
+
+                <h2>Key Features</h2>
+                <ul>
+                    <li>Bilingual support (Hebrew and English)</li>
+                    <li>Dark theme with gold accents</li>
+                    <li>Family tree visualization</li>
+                    <li>Photo gallery with historical images</li>
+                    <li>Mobile-responsive design</li>
+                </ul>
+
+                <h2>Technical Implementation</h2>
+                <p>
+                    The website was built using vanilla HTML, CSS, and JavaScript to ensure fast loading times and 
+                    optimal performance. Key technical aspects include:
+                </p>
+                <ul>
+                    <li>Custom language switching mechanism</li>
+                    <li>Responsive image optimization</li>
+                    <li>CSS Grid and Flexbox for layouts</li>
+                    <li>Modern CSS animations and transitions</li>
+                    <li>SEO optimization for both languages</li>
+                </ul>
+
+                <h2>Challenges & Solutions</h2>
+                <p>
+                    One of the main challenges was implementing a seamless bilingual experience. This was solved by 
+                    creating a JSON-based content management system that allows for easy content updates in both 
+                    languages. The right-to-left (RTL) layout for Hebrew text required careful CSS considerations 
+                    and testing.
+                </p>
+
+                <h2>Results</h2>
+                <p>
+                    The website successfully preserves and presents the Havlin family's rich history while providing 
+                    a modern, user-friendly experience. The site has received positive feedback from family members 
+                    worldwide and serves as a valuable resource for genealogical research.
+                </p>
+            </section>
+
+            <a href="index.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to Portfolio
+            </a>
+        </main>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggle = document.querySelector('.theme-toggle');
+            const icon = themeToggle.querySelector('i');
+            
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            icon.className = savedTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+
+            themeToggle.addEventListener('click', () => {
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                
+                document.documentElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                icon.className = newTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+            });
+        });
+    </script>
+</body>
+</html> 

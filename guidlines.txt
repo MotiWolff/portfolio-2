@@ -1,0 +1,36 @@
+The rules:
+1. The code on GitHub
+2. Automatic deployment after commit
+3. Your own domain
+4. Prohibited: Wix and such
+5. Forbidden: Hugo and such
+6. Looks good on phone, computer and any browser
+7. HTTPS only
+8. There is a favicon, title, meta...
+9. 404 page
+10. Make sure the site is accessible to people with disabilities: alternative text for images, a comfortable color ratio between background and text, support for navigation using only a keyboard, etc.
+11. Write a neat README that explains the project
+12. Test the site with Google Lighthouse or a tool like GTmetrix, and make sure the speed is fine.
+Compress images (Compression), use modern formats (WebP / AVIF), and check that you are not loading heavy files for nothing.
+12. Add a free basic analytics tool, at least to know where the people are coming from
+
+content:
+Whatever you want, but think of it like a personal resume, with at least links to GitHub and Twitter
+
+Additional notes:
+* Also suitable without juniors. It is important to develop a personal brand
+
+* Give a link here and I will be happy to give feedback
+
+* A personal domain costs money, about $10 per year. All other things are possible and preferably free. Every cloud has a free threshold today
+
+* You don't need to go wild with animations and beautifications just == good
+
+You don't need JavaScript libraries like React, Vue or a CSS library like Tailwind, but you can if you want to learn
+
+* There are 100 different ways to implement this but if you get stuck in Analysis Paralysis and you want a pointer, then I would implement it with
+AWS Amplify
+
+* Be sure to have correct titles (h1, h2...), title tags that reflect the content, and friendly URLs if you use more than one page
+
+* Bonus: a contact form that uses a free service interface (eg Formspree) or a simple Lambda

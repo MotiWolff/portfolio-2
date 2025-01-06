@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <meta name="description" content="Moti Wolff - Computer Science Student and Web Developer Portfolio. View my projects and experience in web development.">
+    <meta name="keywords" content="web development, computer science, portfolio, Moti Wolff, developer">
+    <meta name="author" content="Moti Wolff">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta property="og:title" content="Moti Wolff - Portfolio">
+    <meta property="og:description" content="Computer Science Student and Web Developer Portfolio">
+    <meta property="og:image" content="path-to-your-preview-image.jpg">
+</head>
+<body>
+    <div class="container">
+        <header class="main-header">
+            <nav>
+                <div class="logo">M.Wolff;</div>
+                <div class="nav-links">
+                    <a href="#home" class="active">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#education">Education</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </nav>
+        </header>
+
+        <main>
+            <section id="home" class="section hero-section">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="name">Moti Wolff</h1>
+                        <h2 class="title">Computer Science Student & Developer</h2>
+                        <p class="description">Building digital experiences with clean code and creative solutions.</p>
+                        <div class="cta-buttons">
+                            <a href="#contact" class="primary-button">Get in touch</a>
+                            <a href="#projects" class="secondary-button">View Projects</a>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://github.com/MotiWolff" target="_blank" aria-label="GitHub Profile">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://x.com/MotiWolff" target="_blank" aria-label="Twitter Profile">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/mordechay-wolff-13b440180" target="_blank" aria-label="LinkedIn Profile">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="me.jpg" alt="Moti Wolff - Profile Picture" class="profile-image">
+                    </div>
+                </div>
+            </section>
+
+            <section id="about" class="section about-content">
+                <h2 class="about-title">About Me.</h2>
+                <p class="about-text">
+                    As I'm joining the IDF Tech Units, I'm embarking on a journey to learn and develop my skills in the field of computer science. I'm a self-motivated and efficient learner, always seeking new challenges and opportunities to expand my knowledge.
+                </p>
+                <div class="technologies">
+                    <h3>Technologies I've worked with:</h3>
+                    <div class="tech-icons">
+                        <div class="tech-icon">
+                            <i class="devicon-html5-plain"></i>
+                            <span class="tech-name">HTML</span>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="devicon-css3-plain"></i>
+                            <span class="tech-name">CSS</span>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="devicon-javascript-plain"></i>
+                            <span class="tech-name">JavaScript</span>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="devicon-python-plain"></i>
+                            <span class="tech-name">Python</span>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="devicon-c-plain"></i>
+                            <span class="tech-name">C</span>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="devicon-mysql-plain"></i>
+                            <span class="tech-name">SQL</span>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="devicon-swift-plain"></i>
+                            <span class="tech-name">Swift</span>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="devicon-git-plain"></i>
+                            <span class="tech-name">Git</span>
+                        </div>
+                    </div>
+                
+                </div>
+                <a href="https://drive.google.com/file/d/18JTqJ5zWwUNHjTG0Lo11TbgB7d5SVsRl/view?usp=sharing" class="download-cv">Download CV <span>↓</span></a>
+            </section>
+            <section id="education" class="section experience-content">
+                <h2 class="experience-title">Education.</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="date">June 2023 — December 2024</div>
+                        <div class="role">Introduction to Python</div>
+                        <div class="company">Campus IL</div>
+                        <div class="details">
+                            <p>Learned the basics of Python and its applications in various fields.</p>
+                            <p>Developed a Hangman Game and a Israeli ID number generator using Python.</p>
+                            <div class="certificate-links">
+                                <a href="https://courses.campus.gov.il/certificates/6ba894566c174661907293c4c6a0790a" target="_blank">
+                                    <i class="fas fa-certificate"></i>
+                                    View Certificate 1
+                                </a>
+                                <a href="https://courses.campus.gov.il/certificates/cc354fe6f191431194c89f6787b1ebaa" target="_blank">
+                                    <i class="fas fa-certificate"></i>
+                                    View Certificate 2
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="date">August 2024 — November 2024</div>
+                        <div class="role">Introduction to Computer Science</div>
+                        <div class="company">CS50 by Harvard University</div>
+                        <div class="details">
+                            <p>Learned the basics of computer science and programming.</p>
+                            <p>Equipped with the skills to build multiple projects using various programming languages.</p>
+                            <div class="certificate-links">
+                                <a href="https://cs50.harvard.edu/certificates/cbc65b16-4263-4910-ad51-3320129e8fa1" target="_blank">
+                                    <i class="fas fa-certificate"></i>
+                                    View Certificate
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="date">September 2024 — Present</div>
+                        <div class="role">Math, Computer Science & Technical English</div>
+                        <div class="company">KodCode Military Academy</div>
+                        <div class="details">
+                            <p>Learned the basics of computer science and programming.</p>
+                            <p>Improved my skills in math as needed for the IDF Tech Units.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="date">December 2024 — Present</div>
+                        <div class="role">Introduction to Cyber Security</div>
+                        <div class="company">CS50 by Harvard University</div>
+                        <div class="details">
+                            <p>Learning the basics of cyber security and its applications.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="projects" class="section projects-content">
+                <h2 class="projects-title">Key Projects.</h2>
+                
+                <div class="projects-list">
+                    <div class="project-item">
+                        <h3>Havlin Family Website</h3>
+                        <div class="video-container">
+                            <video autoplay loop muted playsinline>
+                                <source src="havlin-demo.webm" type="video/webm">
+                                <source src="havlin-demo.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <p class="project-description">
+                            Developed a heritage-focused web application showcasing the Havlin family's Jewish legacy and Chabad activities using HTML, JavaScript and Netlify implementation for a modern, responsive design. The site features a dark theme with gold accents, implementing both Hebrew and English language support.
+                        </p>
+                        <div class="tech-stack">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>Git</span>
+                            <span>Netlify</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Demo |</a>
+                            <a href="havlin-project.html" class="project-link">View More</a>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <h3>This Website</h3>
+                        <div class="project-image">
+                            <img src="this-website.png" alt="Portfolio Website Screenshot" loading="lazy">
+                        </div>
+                        <p class="project-description">
+                            Built a modern, responsive portfolio website using vanilla HTML, CSS, and JavaScript. 
+                            Implemented dark/light mode, smooth animations, and accessibility features. 
+                            Focused on clean code and optimal performance.
+                        </p>
+                        <div class="tech-stack">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/yourusername/portfolio" class="project-link">GitHub</a>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <h3>Pregnancy Tracker</h3>
+                        <div class="project-image">
+                            <img src="pregnancy.png" alt="Pregnancy Tracker App Screenshot" loading="lazy">
+                        </div>
+                        <p class="project-description">
+                            Created a pregnancy journey tracker using Flask, SQL for backend and HTML, CSS, and JavaScript for the frontend.
+                            The app allows users to track their pregnancy journey, including weight gain, doctor visits, and more.
+                        </p>
+                        <div class="tech-stack">
+                            <span>Flask</span>
+                            <span>SQL</span>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/MotiWolff/Pregnancy-Tracker" class="project-link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="contact" class="section contact-content">
+                <h2 class="contact-title">Keep in touch.</h2>
+                <p class="contact-subtitle">If you have any questions or just want to say hi, feel free to reach out to me.</p>
+                
+                <form class="contact-form" id="contactForm" action="https://formspree.io/f/mbljvrvd" method="POST">
+                    <div class="form-group">
+                        <input type="text" id="fullName" name="name" placeholder="Full Name" required>
+                        <i class="fas fa-user"></i>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Message" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="send-button">Send</button>
+                </form>
+
+                <div class="copyright">
+                    Copyright © 2025 - Crafted by Moti Wolff
+                </div>
+            </section>
+        </main>
+    </div>
+    <script>
+        const scrollProgress = document.querySelector('.scroll-progress');
+        
+        window.addEventListener('scroll', () => {
+            const scrollPer = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            const scrollPosition = Math.min(Math.max(scrollPer, 0), 70); // Limit to 70% of container height
+            scrollProgress.style.top = `${scrollPosition}%`;
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.section');
+            const navLinks = document.querySelectorAll('nav a');
+        
+            const observerOptions = {
+                root: document.querySelector('.left-side'),
+                rootMargin: '-20% 0px',
+                threshold: 0.3
+            };
+        
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.id;
+                        console.log('Current section:', id); // For debugging
+                        navLinks.forEach(link => {
+                            const href = link.getAttribute('href').substring(1); // Remove #
+                            if (href === id) {
+                                link.classList.add('active');
+                            } else {
+                                link.classList.remove('active');
+                            }
+                        });
+                    }
+                });
+            }, observerOptions);
+        
+            sections.forEach(section => {
+                observer.observe(section);
+                console.log('Observing section:', section.id); // For debugging
+            });
+            document.getElementById('contactForm').addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const form = e.target;
+                const submitButton = form.querySelector('button[type="submit"]');
+                
+                try {
+                    submitButton.textContent = 'Sending...';
+                    submitButton.disabled = true;
+                    
+                    const response = await fetch(form.action, {
+                        method: 'POST',
+                        body: new FormData(form),
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+                    
+                    if (response.ok) {
+                        form.reset();
+                        alert('Message sent successfully!');
+                    } else {
+                        throw new Error('Failed to send message');
+                    }
+                } catch (error) {
+                    alert('Error sending message. Please try again.');
+                    console.error('Error:', error);
+                } finally {
+                    submitButton.textContent = 'Send';
+                    submitButton.disabled = false;
+                }
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggle = document.querySelector('.theme-toggle');
+            const icon = themeToggle.querySelector('i');
+            
+            // Check for saved theme preference
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            icon.className = savedTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+
+            themeToggle.addEventListener('click', () => {
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                
+                document.documentElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                icon.className = newTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+            });
+        });
+    </script>
+</body>
+</html>
