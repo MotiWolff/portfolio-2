@@ -230,43 +230,51 @@ body {
     gap: 3rem;
 }
 
+/* Project Cards - Unified Styling */
 .project-item {
-    background: var(--card-bg);
+    background: var(--bg-secondary);
     border-radius: 10px;
-    padding: 20px;
+    padding: 25px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin-bottom: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     border-color: var(--accent-primary);
-    transform: translateY(-8px);
 }
 
 .project-item h3 {
-    font-size: 1.3rem;
-    margin-bottom: 10px;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
     color: var(--text-primary);
 }
 
+/* Tech Stack - Unified Styling */
 .tech-stack {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin-top: 10px;
+    margin: 15px 0;
 }
 
 .tech-stack span {
-    background-color: #4CAF50;
-    color: white;
-    padding: 4px 12px;
-    border-radius: 15px;
-    font-size: 0.9em;
-    transition: background-color 0.3s ease;
+    background: var(--accent-primary);
+    color: var(--bg-primary);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
 }
 
 .tech-stack span:hover {
-    background-color: #388E3C;
+    background: var(--bg-primary);
+    color: var(--accent-primary);
+    transform: translateY(-2px);
 }
 
 /* About Section */
