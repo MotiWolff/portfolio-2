@@ -5,10 +5,15 @@
   force = true
 
 [[headers]]
+  for = "/*.css"
+  [headers.values]
+    Content-Type = "text/css"
+
+[[headers]]
   for = "/*"
   [headers.values]
     Strict-Transport-Security = "max-age=31536000; includeSubDomains"
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
-    Content-Security-Policy = "default-src 'self' https: 'unsafe-inline' 'unsafe-eval' https://www.google-analytics.com https://www.googletagmanager.com;"
+    Content-Security-Policy = "default-src 'self' https: 'unsafe-inline' 'unsafe-eval' https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline';"
     Referrer-Policy = "strict-origin-when-cross-origin" 
