@@ -919,6 +919,20 @@ body {
     margin-bottom: 15px;
 }
 
+.project-links {
+    margin-top: 15px;
+}
+
+.project-link {
+    color: #4CAF50;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
 /* View All Button */
 .view-all {
     text-align: center;
