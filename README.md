@@ -28,6 +28,11 @@ A modern, responsive portfolio website showcasing my projects and skills in web 
 The site is automatically deployed via Netlify on push to main branch.
 
 ## Performance
+- Lighthouse grade:
+  - Performance: 96
+  - Accessibility: 97
+  - Best Practices: 100
+  - SEO: 100
 - GTmetrix grade: A
 
 ## Contact
