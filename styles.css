@@ -833,3 +833,39 @@ body {
         padding: 15px;
     }
 }
+
+/* Mobile phones (portrait mode) */
+@media screen and (max-width: 480px) {
+    /* Fix navigation */
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 10px;
+    }
+    
+    /* Fix profile image */
+    .profile-image {
+        width: 200px;
+        height: 200px;
+        margin: 20px auto;
+        display: block;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+    
+    /* Adjust hero section */
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+    }
+    
+    /* Adjust container padding */
+    .container {
+        padding: 0 15px;
+        margin: 0 auto;
+    }
+}
