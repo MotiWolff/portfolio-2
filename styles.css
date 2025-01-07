@@ -790,3 +790,46 @@ body {
 .project-image img:hover {
     transform: scale(1.02);
 }
+
+/* Tablets */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 0 15px;
+    }
+    
+    .nav-links {
+        gap: 15px;
+    }
+    
+    .section {
+        padding: 40px 0;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+    .nav-links {
+        font-size: 0.9rem;
+        gap: 10px;
+    }
+    
+    .project-card {
+        flex-direction: column;
+    }
+    
+    .project-image {
+        width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .contact-form {
+        width: 100%;
+        padding: 15px;
+    }
+}
