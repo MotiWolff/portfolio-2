@@ -15,6 +15,9 @@ A modern, responsive portfolio website showcasing my projects and skills in web 
 - CSS3
 - JavaScript
 - Netlify for hosting
+- CloudFlare for DNS & SSL Certificate
+- Google Analytics
+- 
 
 ## Setup
 1. Clone the repository
@@ -25,8 +28,7 @@ A modern, responsive portfolio website showcasing my projects and skills in web 
 The site is automatically deployed via Netlify on push to main branch.
 
 ## Performance
-- Lighthouse score: XX/100
-- GTmetrix grade: X
+- GTmetrix grade: A
 
 ## Contact
-For any queries, reach out at [your-email] 
+For any queries, reach out at motiwolff@gmail.com
