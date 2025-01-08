@@ -1,0 +1,16 @@
+{
+  "name": "portfolio-website",
+  "version": "1.0.0",
+  "description": "Moti Wolff's Portfolio Website",
+  "scripts": {
+    "optimize-images": "node scripts/optimize-images.js",
+    "minify-js": "uglifyjs js/*.js -o js/*.min.js",
+    "minify-css": "cleancss -o styles.min.css styles.css",
+    "build": "npm run optimize-images && npm run minify-js && npm run minify-css"
+  },
+  "devDependencies": {
+    "sharp": "^0.32.1",
+    "uglify-js": "^3.17.4",
+    "clean-css-cli": "^5.6.2"
+  }
+} 

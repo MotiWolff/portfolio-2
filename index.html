@@ -12,6 +12,15 @@
     <meta name="description" content="Moti Wolff - Computer Science Student and Web Developer Portfolio. View my projects and experience in web development.">
     <meta name="keywords" content="web development, computer science, portfolio, Moti Wolff, developer">
     <meta name="author" content="Moti Wolff">
+    <meta http-equiv="Content-Security-Policy" content="
+  default-src 'self';
+  script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://cdnjs.cloudflare.com;
+  style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com https://cdn.jsdelivr.net;
+  img-src 'self' data: https:;
+  font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net;
+  connect-src 'self' https://formspree.io;
+  form-action 'self' https://formspree.io;
+">
     <link rel="icon" type="image/png" href="favicon.png">
     <meta property="og:title" content="Moti Wolff - Portfolio">
     <meta property="og:description" content="Computer Science Student and Web Developer Portfolio">
@@ -20,20 +29,18 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="manifest" href="site.webmanifest">
+    <script type="module">
+        import { initAnalytics } from './js/analytics.js';
+        // טען את Analytics רק לאחר הסכמת המשתמש לעוגיות
+        if (localStorage.getItem('cookiesAccepted')) {
+            initAnalytics();
+        }
+    </script>
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-41Q6D33M3B"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-41Q6D33M3B');
-</script>
 <body>
     <div class="container">
         <header class="main-header">
-            <nav>
+            <nav role="navigation" aria-label="Main navigation">
                 <div class="logo">M.Wolff;</div>
                 <div class="nav-links">
                     <a href="#home" class="active">Home</a>
@@ -48,7 +55,7 @@
             </nav>
         </header>
 
-        <main>
+        <main role="main">
             <section id="home" class="section hero-section">
                 <div class="hero-content">
                     <div class="hero-text">
@@ -86,41 +93,41 @@
                     <h3>Technologies I've worked with:</h3>
                     <div class="tech-icons">
                         <div class="tech-icon">
-                            <i class="devicon-html5-plain"></i>
+                            <i class="devicon-html5-plain colored"></i>
                             <span class="tech-name">HTML</span>
                         </div>
                         <div class="tech-icon">
-                            <i class="devicon-css3-plain"></i>
+                            <i class="devicon-css3-plain colored"></i>
                             <span class="tech-name">CSS</span>
                         </div>
                         <div class="tech-icon">
-                            <i class="devicon-javascript-plain"></i>
+                            <i class="devicon-javascript-plain colored"></i>
                             <span class="tech-name">JavaScript</span>
                         </div>
                         <div class="tech-icon">
-                            <i class="devicon-python-plain"></i>
+                            <i class="devicon-python-plain colored"></i>
                             <span class="tech-name">Python</span>
                         </div>
                         <div class="tech-icon">
-                            <i class="devicon-c-plain"></i>
+                            <i class="devicon-c-plain colored"></i>
                             <span class="tech-name">C</span>
                         </div>
                         <div class="tech-icon">
-                            <i class="devicon-mysql-plain"></i>
+                            <i class="devicon-mysql-plain colored"></i>
                             <span class="tech-name">SQL</span>
                         </div>
                         <div class="tech-icon">
-                            <i class="devicon-swift-plain"></i>
+                            <i class="devicon-swift-plain colored"></i>
                             <span class="tech-name">Swift</span>
                         </div>
                         <div class="tech-icon">
-                            <i class="devicon-git-plain"></i>
+                            <i class="devicon-git-plain colored"></i>
                             <span class="tech-name">Git</span>
                         </div>
                     </div>
                 
                 </div>
-                <a href="https://drive.google.com/file/d/18JTqJ5zWwUNHjTG0Lo11TbgB7d5SVsRl/view?usp=sharing" class="download-cv">Download CV <span>↓</span></a>
+                <a href="/assets/cv.pdf" class="download-cv" download>Download CV <span>↓</span></a>
             </section>
             <section id="education" class="section experience-content">
                 <h2 class="experience-title">Education.</h2>
@@ -211,7 +218,8 @@
                     <div class="project-item">
                         <h3>This Website</h3>
                         <div class="project-image">
-                            <img src="this-website.png" alt="Portfolio Website Screenshot" loading="lazy">
+                            <div class="image-skeleton"></div>
+                            <img src="this-website.png" alt="Portfolio Website Screenshot" loading="lazy" onload="this.parentElement.classList.add('loaded')">
                         </div>
                         <p class="project-description">
                             Built a modern, responsive portfolio website using vanilla HTML, CSS, and JavaScript. 
@@ -281,14 +289,17 @@
             </section>
         </main>
     </div>
+    <div class="scroll-progress"></div>
     <script>
         const scrollProgress = document.querySelector('.scroll-progress');
         
-        window.addEventListener('scroll', () => {
-            const scrollPer = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-            const scrollPosition = Math.min(Math.max(scrollPer, 0), 70); // Limit to 70% of container height
-            scrollProgress.style.top = `${scrollPosition}%`;
-        });
+        if (scrollProgress) {
+            window.addEventListener('scroll', () => {
+                const scrollPer = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+                const scrollPosition = Math.min(Math.max(scrollPer, 0), 70);
+                scrollProgress.style.top = `${scrollPosition}%`;
+            });
+        }
 
         document.addEventListener('DOMContentLoaded', () => {
             const sections = document.querySelectorAll('.section');
@@ -304,9 +315,8 @@
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         const id = entry.target.id;
-                        console.log('Current section:', id); // For debugging
                         navLinks.forEach(link => {
-                            const href = link.getAttribute('href').substring(1); // Remove #
+                            const href = link.getAttribute('href').substring(1);
                             if (href === id) {
                                 link.classList.add('active');
                             } else {
@@ -319,59 +329,9 @@
         
             sections.forEach(section => {
                 observer.observe(section);
-                console.log('Observing section:', section.id); // For debugging
-            });
-            document.getElementById('contactForm').addEventListener('submit', async (e) => {
-                e.preventDefault();
-                const form = e.target;
-                const submitButton = form.querySelector('button[type="submit"]');
-                
-                try {
-                    submitButton.textContent = 'Sending...';
-                    submitButton.disabled = true;
-                    
-                    const response = await fetch(form.action, {
-                        method: 'POST',
-                        body: new FormData(form),
-                        headers: {
-                            'Accept': 'application/json'
-                        }
-                    });
-                    
-                    if (response.ok) {
-                        form.reset();
-                        alert('Message sent successfully!');
-                    } else {
-                        throw new Error('Failed to send message');
-                    }
-                } catch (error) {
-                    alert('Error sending message. Please try again.');
-                    console.error('Error:', error);
-                } finally {
-                    submitButton.textContent = 'Send';
-                    submitButton.disabled = false;
-                }
-            });
-        });
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const themeToggle = document.querySelector('.theme-toggle');
-            const icon = themeToggle.querySelector('i');
-            
-            // Check for saved theme preference
-            const savedTheme = localStorage.getItem('theme') || 'dark';
-            document.documentElement.setAttribute('data-theme', savedTheme);
-            icon.className = savedTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
-
-            themeToggle.addEventListener('click', () => {
-                const currentTheme = document.documentElement.getAttribute('data-theme');
-                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-                
-                document.documentElement.setAttribute('data-theme', newTheme);
-                localStorage.setItem('theme', newTheme);
-                icon.className = newTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
             });
         });
     </script>
+    <script type="module" src="js/main.min.js"></script>
 </body>
 </html>

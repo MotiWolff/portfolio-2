@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://motiwolff.github.io/portfolio-2/sitemap.xml 
